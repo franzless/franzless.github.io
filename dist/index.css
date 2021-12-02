@@ -242,7 +242,7 @@ a {
 
 @media (max-width: 769px) {
   .main-padding {
-    padding: 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
     text-align: center;
   }
 }

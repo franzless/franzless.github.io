@@ -96,7 +96,7 @@ a {
 }
 .main-padding{
     @include breakpoints-down(small) {
-        padding: rem(24);
+        padding: 0 rem(24) 0 rem(24);
         text-align: center;
     }
 
