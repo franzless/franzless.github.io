@@ -1,0 +1,44 @@
+@use '../abstracts/index' as *;
+.techList{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: rem(152);
+    height: rem(40);
+    font-weight: rem(16);
+    font-family: 'Bellefair';
+    padding: 0;
+    margin: rem(34) auto rem(26) auto;    
+    @include breakpoints(large,medium) {
+        margin: rem(56) auto rem(44) auto;
+        width: rem(210);
+        height: rem(60);
+        font-weight: rem(24);
+    }
+    @include breakpoints-up(xlarge) {        
+        flex-direction: column;
+        height: rem(304);
+        width: rem(100);
+        margin: 0 rem(80) 0 rem(165);                 
+    }    
+    >li{
+        border-radius: 50%;
+        border: 1px solid $accent;
+        width: rem(40);
+        height: rem(40);
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include breakpoints(large,medium) {           
+            width: rem(60);
+            height: rem(60);
+        }
+        @include breakpoints-up(xlarge) {        
+            width: rem(80);
+            height: rem(80);        
+        }        
+    }
+}

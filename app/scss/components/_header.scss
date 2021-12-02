@@ -1,0 +1,95 @@
+@use '../abstracts' as *;
+
+.navigation {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: $accent;
+    padding: rem(24);
+    @include breakpoints-up(xlarge) {
+        padding-top: rem(40);        
+    }
+    @include breakpoints(large,medium) {
+        padding: 0;
+    }
+   
+    &__tablet{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(255,255,255,0.1);
+        backdrop-filter: blur(40px);
+        width: rem(450);
+        height: rem(96);
+        font-size: rem(14);
+        letter-spacing: rem(2.36);
+        
+        &--logo {
+           padding-left: rem(39); 
+        }       
+        
+        a {            
+            color:white;            
+            display:block;
+            padding: rem(39) 0 rem(39) 0;
+            
+            &:hover{
+                border-bottom: 2px solid red !important;
+            }
+            
+        }        
+    }
+    &__desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255,255,255,0.1);
+        backdrop-filter: blur(40px);
+        width: rem(830);
+        height: rem(96);
+        
+         >a{
+             padding: rem(39) rem(24) rem(39) rem(24);
+             color: $accent;             
+             &:hover{
+                border-bottom: 2px solid red !important;
+            }
+         }
+        &--logo {
+            margin-left:rem(55);
+        } 
+        &--span{
+            height:rem(1);
+            width: calc(100vw - rem(800) - rem(167));            
+            transform: translate(rem(32),0);
+            background-color: $accent;
+            z-index: 100;
+                       
+        }
+    } 
+  
+    &__mobile--close {
+        cursor: pointer;
+        padding: rem(33) rem(26) rem(64) rem(208);       
+    }
+    &__mobile--overlay {
+        display:none;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position:fixed;
+        width: rem(254);
+        height: 100vh;
+        background-color: rgba(255,255,255, 4%);
+        backdrop-filter: blur(40px);
+        z-index: 100;
+        color: $accent;
+        right:0;
+        top:0;
+        >a{
+            color: $accent;
+            padding: rem(16) rem(16);
+        }
+    }
+}

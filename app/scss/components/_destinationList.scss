@@ -1,0 +1,37 @@
+@use '../abstracts/index' as *;
+
+.destinationList{
+    list-style: none;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: rem(14);
+    letter-spacing: rem(2.36);
+    font-family: 'Barlow Condensed';
+    padding: 0;
+    width: rem(237);
+    height: rem(28);    
+    @include breakpoints(large,medium) {
+        width: rem(285.5);
+        height:rem(34);
+        font-size: rem(16);
+        letter-spacing: rem(2.7);        
+    }
+    @include breakpoints-up(xlarge) {
+        width: rem(285.5);      
+        font-size: rem(16);
+        letter-spacing: rem(2.7);
+        margin-top:rem(174);   
+    }  
+    
+    >li{      
+        color: $secondary;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding-bottom: rem(8);
+        &:hover{
+            border-bottom: 2px solid red !important;
+        }
+     }
+}

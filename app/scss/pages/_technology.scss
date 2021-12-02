@@ -1,0 +1,108 @@
+@use '../abstracts/index' as *;
+.tech{
+    &__title{
+        font-size: rem(16);
+        letter-spacing: rem(2.7);
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: center;        
+        text-transform: uppercase;
+        margin: rem(34) 0 rem(32) 0;
+        &--grey{
+            color: $grey;
+            @include breakpoints(large,medium) {
+            align-self: flex-start;
+            }
+        }
+        &--margin {
+            @include breakpoints(large,medium) {              
+                align-self: flex-start;
+                margin: rem(40) 0 rem(60) rem(38.5);           
+            }
+
+        }
+        @include breakpoints(large,medium) {
+            font-size: rem(20);
+            letter-spacing: rem(3.38);
+            justify-content: start;
+            margin: 0;                        
+                       
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(28);
+            letter-spacing: rem(4.72);
+            margin: rem(76) 0 rem(137) rem(166.5);
+            justify-content: start;
+        }    
+    }
+    &__image {
+       width: 100%;
+       height:rem(170);
+       @include breakpoints(large,medium) {
+        height: rem(310);                       
+        }
+        @include breakpoints-up(xlarge) {
+            width: rem(515);
+            height: rem(527);
+            position: absolute;
+            right:0;
+            top: calc((100vh - rem(527)) / 2 );
+                                                         
+        }       
+    }
+    &__container{
+        @include breakpoints(large,medium) {
+           width: rem(458);
+           height: rem(237);     
+        }
+       
+    }
+    &__term{
+        font-size: rem(14);
+        letter-spacing: rem(2.36);
+        color: $secondary;
+        text-transform: uppercase;
+        margin-bottom: rem(9);
+        @include breakpoints-up(xlarge) {
+            font-size: rem(16);
+            letter-spacing: rem(2.7);
+            align-self: start;          
+        }    
+    }
+    &__object{
+        font-size: rem(24);
+        font-family: 'Bellefair';
+        text-transform: uppercase;
+        margin-bottom: rem(16);
+        @include breakpoints(large,medium) {
+            font-size: rem(40);                       
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(56);
+            text-align: start;                       
+            align-self: start;
+            width: rem(470);                                   
+        }            
+    }
+    &__description{
+        font-size: rem(15);
+        color:$secondary;
+        line-height: rem(25);
+        margin: rem(0) rem(24) rem(56) rem(24);
+        text-align: center;
+        @include breakpoints(large,medium) {
+            font-size: rem(16);
+            line-height: rem(28);
+            max-width: rem(458);
+            margin-bottom: rem(97);            
+        } 
+        @include breakpoints-up(xlarge) {
+            font-size: rem(18);
+            line-height: rem(32);
+            max-width: rem(458);
+            margin: 0;
+            text-align: start;                                 
+        }   
+
+    }
+}

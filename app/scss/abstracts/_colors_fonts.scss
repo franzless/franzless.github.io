@@ -1,0 +1,104 @@
+@use './functions' as *;
+@use './mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+//Colors
+$primary: #0B0D17;
+$secondary: #D0D6F9;
+$accent: #FFFFFF;
+$grey: #979797;
+//Fonts
+h1 {
+    font-size: rem(150);
+    font-family: 'Bellefair', serif;
+    color: $accent;
+    text-transform: uppercase;
+    padding: rem(16) 0 rem(16) 0;
+    margin:0;    
+}
+h2 {
+    font-size: rem(100);
+    font-family: 'Bellefair', serif;
+    color: $accent;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;     
+}
+h3 {
+    font-size: rem(56);
+    font-family: 'Bellefair', serif;
+    color: $accent;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;
+    @include breakpoints(large,medium) {
+       font-size: rem(80);
+    }
+    @include breakpoints-up(xlarge) {
+        font-size: rem(100);
+    }       
+}
+h4 {
+    font-size: rem(32);
+    font-family: 'Bellefair', serif;
+    color: $accent;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;       
+}
+h5 {
+    font-size: rem(28);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: rem(4.75);
+    color: $secondary;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;     
+}
+.subheading1 {
+    font-size: rem(28);
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $accent;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;     
+}
+.subheading2 {
+    font-size: rem(14);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: rem(2.35);
+    color: $secondary;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;     
+}
+.nav--text {
+    font-size: rem(16);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: rem(2.7);
+    color: $accent;
+    text-transform: uppercase;
+    padding:0;
+    margin:0;     
+}
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: rem(18);
+    color: $accent;
+    padding:0;
+    margin:0;    
+}
+.body--text{
+    font-size: rem(15);
+    line-height: rem(25);
+    color: $secondary;
+    font-family: 'Barlow Condensed', sans-serif;
+    @include breakpoints(large,medium) {
+        font-size: rem(16);
+        line-height: rem(28);
+     }
+     @include breakpoints-up(xlarge) {
+        font-size: rem(18);
+        line-height: rem(32);
+    }           
+
+}

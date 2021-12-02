@@ -1,0 +1,66 @@
+@use '../abstracts/index' as *;
+.main {    
+    
+    &__textTop{
+        text-transform: uppercase;
+        font-size: rem(16);
+        letter-spacing: rem(2.7);
+        margin-top: rem(48);
+        color:$secondary;
+        @include breakpoints(large,medium) {
+            font-size: rem(20);
+            margin:rem(106) auto 0 auto;
+            width: rem(444);
+        }       
+        @include breakpoints-up(xlarge) {
+            font-size: rem(28);
+            letter-spacing: rem(4.72);
+            width: rem(444);
+            margin: rem(251) auto rem(0) auto;
+        }      
+    } 
+    &__textMiddle {
+        font-size: rem(80);
+        text-transform: uppercase;
+        font-family: 'Bellefair';
+        margin: rem(16) 0 rem(16) 0;
+        @include breakpoints(large,medium) {
+            font-size: rem(150);
+            margin: rem(24) auto rem(24) auto;
+            width: rem(444);
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(150);
+            width: rem(444);
+            margin: rem(24) auto rem(0) auto;           
+        }        
+ 
+     }
+     &__textBottom{        
+        font-size: rem(15);
+        text-align: center;
+        line-height: rem(25);
+        margin-bottom: rem(81);
+        color: $secondary;
+        @include breakpoints(large,medium) {
+            font-size: rem(16);
+            line-height: rem(28);
+            width: rem(444);
+            margin: rem(0) auto rem(159) auto;
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(18);
+            line-height: rem(32);
+            width: rem(444);
+            margin: rem(24) auto rem(0) auto;
+        }       
+      
+    }
+    &__button {
+        @include breakpoints-up(xlarge) {
+            margin-top: rem(359);
+        }       
+        
+    }   
+    
+}

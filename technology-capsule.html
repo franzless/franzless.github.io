@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body id="technology" onload="pageLoadedTech('technology','Launch vehicle')" class="background__technology ">  
+  <header class="nav--text">   
+    <nav >
+      <div class="hide-for-desktop hide-for-tablet navigation">
+      <img src="./assets/shared/logo.svg" alt="" >     
+      <img src="./assets/shared/icon-hamburger.svg" alt="" class="navigation__mobile--open" onclick="openOverlay()">
+      <div class="navigation__mobile--overlay nav--text">
+        <img src="./assets/shared/icon-close.svg" alt="" class="navigation__mobile--close" onclick="closeOverlay()">
+        <a href="index.html" class="navigation__a--home">00 Home</a>
+        <a href="destination-europa.html" class="navigation__a--destination">01 Destination</a>
+        <a href="crew-commander.html" class="navigation__a--crew">02 Crew</a>
+        <a href="#"class="navigation__a--technology">03 Technology</a>
+      </div>
+      </div>
+
+    <div class="hide-for-mobile hide-for-desktop navigation">
+      <a href="#" class="navigation__tablet--logo"><img src="./assets/shared/logo.svg" alt=""></a>
+        <div class="navigation__tablet">
+          <a href="index.html" class="navigation__a--home">Home</a>
+          <a href="destination-europa.html" class="navigation__a--destination">Destination</a>
+          <a href="crew-commander.html" class="navigation__a--crew">Crew</a>
+          <a href="#"class="navigation__a--technology">Technology</a>
+      </div>  
+    </div>
+
+    <div class="hide-for-mobile hide-for-tablet navigation">
+      <a href="#" class="navigation__desktop--logo"><img src="./assets/shared/logo.svg" alt=""></a>
+      <span class="navigation__desktop--span"></span>
+        <div class="navigation__desktop">
+        <a href="index.html" class="navigation__a--home">00 Home</a>
+        <a href="destination-europa.html" class="navigation__a--destination">01 Destination</a>
+        <a href="crew-commander.html" class="navigation__a--crew">02 Crew</a>
+        <a href="#"class="navigation__a--technology">03 Technology</a>
+      </div>  
+    </div>
+    </nav>
+  </header>
+    <main>
+      <section class="grid-container-tech">
+        <div class="tech__title">          
+          <span class="tech__title--margin"><span class="tech__title--grey">03&nbsp;</span>Space launch 101</span>  
+        </div>
+        <div class="flex-column-center">
+          <img class="tech__image" src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="">
+        </div>
+        <div class="flex-dynamic-tech">
+          <ul class="techList">
+            <li id="Launch_vehicle" onclick="loadTech('Launch vehicle')">1</li>
+            <li id="Spaceport" onclick="loadTech('Spaceport')">2</li>
+            <li id="Space_capsule" onclick="loadTech('Space capsule')">3</li>
+          </ul>
+         
+          <div class="flex-column-center">
+          <span class="tech__term">The terminology...</span>
+          <span class="tech__object">Space capsule</span>
+          <p class="tech__description"> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+            capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+            you'll spend your time during the flight. It includes a space gym, cinema, 
+            and plenty of other activities to keep you entertained.</p>
+        </div>
+      </div>     
+      </section>
+    </main>
+  
+  
+
+ 
+  <script src="app/js/index.js"></script>
+</body>
+</html>

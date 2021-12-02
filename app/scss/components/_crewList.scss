@@ -1,0 +1,31 @@
+@use '../abstracts/index' as *;
+.crewList{
+    list-style: none;
+    width: rem(88);
+    height: rem(10);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0;
+    margin:0;
+    @include breakpoints-up(xlarge) {
+      width: rem(132);
+      height: rem(15);
+    }
+    > li{
+        color: $accent;
+        border-radius: 50%;
+        width: rem(10);
+        height: rem(10);
+        background-color: $grey;
+        @include breakpoints-up(xlarge) {
+           width: rem(15);
+           height: rem(15);
+        }
+        &:hover {
+            background-color: red !important;            
+            cursor: pointer;
+        }
+    }
+
+}

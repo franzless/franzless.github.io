@@ -1,0 +1,127 @@
+@use '../abstracts/index' as *;
+.flex {
+    display:flex;    
+    &-row{
+        @extend .flex;
+        flex-flow: row nowrap;
+        &-center{
+            @extend .flex-row;
+            justify-content: center;
+            align-items: center;            
+        }
+    }
+    &-column{
+        @extend .flex;
+        flex-flow: column nowrap;
+        &-center{
+            @extend .flex-column;
+           align-items: center;
+           justify-content: center; 
+        }
+    }
+    &-dynamic{
+        @extend .flex;
+        flex-flow: column nowrap;
+        
+        @include breakpoints-up(xlarge) {
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;                
+        }
+        &-tech {
+            @extend .flex;
+            flex-flow: column nowrap;
+            
+            @include breakpoints-up(xlarge) {
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: start;                
+            }
+        }
+      
+    }
+}
+.grid-container {
+    display: grid;
+    // grid-auto-flow: column;
+    // grid-auto-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(50%, rem(1024)));
+    @include breakpoints-up(xlarge) {
+        grid-template-columns: repeat(2, minmax(50%, rem(1024)));              
+    }
+    // grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+}
+.grid-container-tech {
+    display: grid;   
+    grid-template-columns: 1fr;
+    position: relative;
+    @include breakpoints-up(xlarge) {
+       grid-template-columns: calc(100vw - rem(515));
+              
+    }
+ 
+    // grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+}
+.grid-container-crew {
+    display: grid;
+    // grid-auto-flow: column;
+    // grid-auto-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(50%, rem(1024)));
+    @include breakpoints-up(xlarge) {
+        grid-auto-columns: 50%;
+        grid-template-rows: rem(230) rem(391) rem(115) 1fr;
+        height: calc(100vh - rem(136));
+              
+    }
+    // grid-template-columns: repeat(auto-fit, minmax(10em, 25em));
+}
+.grid-order {
+    &-last{        
+        @include breakpoints(large,medium) {
+            order:4;                     
+        }
+        @include breakpoints-up(xlarge) {
+            grid-column: 2 / 2;
+            grid-row: 1 / -1;
+            align-self: end;
+            
+        }
+    }        
+    &-3{
+        
+        @include breakpoints(large,medium) {
+           order:2;    
+        }
+        @include breakpoints-up(xlarge) {
+            grid-column: 1 / 1;
+            align-self: start;
+            
+        }
+    }
+    &-2{
+        @include breakpoints-up(xlarge) {
+            grid-column: 1 /1;
+            grid-row: 2 / 2;
+            align-self: start;
+            
+        }
+        
+    }
+    &-1{
+        @include breakpoints-up(xlarge) {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+       
+    }
+}
+
+
+.container {
+   height:100%;
+   max-width:100%;
+   max-height:100%;
+   width: 100%;
+   padding:0;
+   margin:0;   
+}

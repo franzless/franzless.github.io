@@ -1,0 +1,29 @@
+@use '../abstracts/index' as * ;
+
+.button__rounded {
+    margin: 0;
+    padding: rem(68) rem(27.5) rem(59) rem(29.5);
+    border-radius: 50%;
+    color: $primary;
+    font-size: rem(20);
+    letter-spacing: rem(1.25);
+    font-family: 'Bellefair';
+    text-transform: uppercase;
+    display: block;
+    border: none;
+    @include breakpoints(large,medium) {
+        padding: rem(103) rem(48) rem(102) rem(46);
+        font-size: rem(32);
+        letter-spacing: rem(2);        
+    }
+    @include breakpoints-up(xlarge) {
+        font-size: rem(32);
+        padding: rem(119) rem(64) rem(118) rem(62); 
+        letter-spacing: rem(2);
+    }     
+    &:hover {        
+        box-shadow: 0 0 0px 80px rgba(255,255,255,0.1);
+        cursor: pointer;
+    }
+
+}

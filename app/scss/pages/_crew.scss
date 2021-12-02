@@ -1,0 +1,106 @@
+@use '../abstracts/index' as *;
+.crew {    
+    &__title{
+        font-size: rem(16);
+        letter-spacing: rem(2.7);
+        display:flex;
+        flex-flow: row nowrap;
+        text-transform: uppercase;                       
+        &--margin {
+            @extend .crew__title;
+            margin: rem(24) auto rem(32) auto;
+            @include breakpoints(large,medium) {
+                margin: rem(40) 0 rem(60) rem(38.5);                                        
+            }
+            @include breakpoints-up(xlarge) {
+                margin: rem(76) 0 rem(154) rem(165.5);
+                width: rem(614);                  
+            }
+        }
+        &--grey{
+            @extend .crew__title;
+            color: $grey;
+        }
+        @include breakpoints(large,medium) {
+            font-size: rem(20);
+            letter-spacing: rem(3.38);
+            align-self: flex-start;            
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(28);
+            letter-spacing: rem(4.72);
+        }
+    }
+    &__image{       
+        max-width: rem(327);
+        max-height: rem(223);
+        margin-bottom: rem(32);
+        @include breakpoints-down(small) {
+            border-bottom: solid $grey rem(1);
+        }
+        @include breakpoints(large,medium) {
+            max-width: rem(456);
+            max-height: rem(572);
+            margin: rem(30) auto 0 auto;                      
+        }
+        @include breakpoints-up(xlarge) {
+            max-width: rem(568);
+            max-height: rem(712);
+            margin: 0;
+            padding: 0;                               
+        }    
+        
+    }   
+    &__jobname{
+        font-size: rem(16);
+        font-family: 'Bellefair';
+        text-transform: uppercase; 
+        color: $grey ;
+        margin-top: rem(32);
+        @include breakpoints(large,medium) {
+            font-size: rem(24); 
+            margin:0;                                
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(32); 
+            margin:0;
+            text-align: start;
+            width: rem(614);
+            margin-left: rem(165.5);                       
+        }    
+    }
+    &__name {
+        font-size: rem(24);
+        font-family: 'Bellefair';
+        text-transform: uppercase;
+        margin-top: rem(8);
+        @include breakpoints(large,medium) {
+            font-size: rem(40);                       
+        }
+        @include breakpoints-up(xlarge) {
+            font-size: rem(56);
+            text-align: start;
+            width: rem(614);
+            margin-left: rem(165.5);                                  
+        }    
+    }
+    &__description{
+        font-size: rem(15);
+        color:$secondary;
+        line-height: rem(25);
+        margin: rem(16) auto rem(104) auto;
+        @include breakpoints(large,medium) {
+            font-size: rem(16);
+            line-height: rem(28);
+            max-width: rem(458);
+            margin-bottom: rem(40);            
+        } 
+        @include breakpoints-up(xlarge) {
+            font-size: rem(18);
+            line-height: rem(32);
+            max-width: rem(458);
+            margin: 0;
+            text-align: start;                                 
+        }   
+    }
+}
