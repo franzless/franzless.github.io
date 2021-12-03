@@ -158,7 +158,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  min-height: 41.6875rem;
 }
 @media (min-width: 1200px) {
   .background__picture {
@@ -174,7 +173,7 @@ a {
 @media (max-width: 769px) {
   .background__picture {
     background-image: url("../assets/home/background-home-mobile.jpg");
-    background-position: center;
+    min-height: 41.6875rem;
   }
 }
 
