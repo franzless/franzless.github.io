@@ -19,6 +19,7 @@
         justify-content: space-evenly;
         align-items: center;
         background-color: rgba(255,255,255,0.1);
+        -webkit-backdrop-filter: blur(40px);
         backdrop-filter: blur(40px);
         width: rem(450);
         height: rem(96);
@@ -46,6 +47,7 @@
         align-items: center;
         background-color: rgba(255,255,255,0.1);
         backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
         width: rem(830);
         height: rem(96);
         
@@ -81,8 +83,7 @@
         position:fixed;
         width: rem(254);
         height: 100vh;
-        background-color: rgba(255,255,255, 4%);
-        backdrop-filter: blur(40px);
+        background-color: $primary;       
         z-index: 100;
         color: $accent;
         right:0;
@@ -92,4 +93,11 @@
             padding: rem(16) rem(16);
         }
     }
+    @supports (-webkit-backdrop-filter: blur(40px)) or (backdrop-filter: blur(40px)) {
+        &__mobile--overlay {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          background-color: rgba(255, 255, 255, 4%);  
+        }        
+      }
 }

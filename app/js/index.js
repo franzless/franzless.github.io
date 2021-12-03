@@ -79,15 +79,15 @@ function loadCrew(crewRole) {
     return res.json();
   }).then(jsondata => {
     var data = jsondata;
-    console.log(data)  
+     
   // Clear selected List Items
     var clearList = document.querySelectorAll(".crewList > li");
     clearList.forEach(item => {
       item.style["background-color"] = "#979797";
     })
     // Set Border of selected Item
-    let refactorRoletoID = crewRole.split(' ').join('_');     
-    console.log(refactorRoletoID);    
+    let refactorRoletoID = crewRole.split(' ').join('_');   
+        
     document.querySelector(`#${refactorRoletoID}`).style["background-color"] = "#FFFFFF";
     
     // GET PLANET DATA
@@ -123,7 +123,7 @@ function loadTech(tech) {
        
     // SET DATA TO DOM
     let imgType = loadTechImg();
-    console.log(imgType);
+    
     document.querySelector(".tech__image").src = techData.images[imgType];   
     document.querySelector(".tech__object").textContent = techData.name;
     document.querySelector(".tech__description").textContent = techData.description;
