@@ -471,6 +471,7 @@ a {
   letter-spacing: 0.078125rem;
   font-family: "Bellefair";
   text-transform: uppercase;
+  background-color: #FFFFFF;
   display: block;
   border: none;
 }

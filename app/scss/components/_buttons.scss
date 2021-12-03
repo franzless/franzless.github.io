@@ -9,6 +9,7 @@
     letter-spacing: rem(1.25);
     font-family: 'Bellefair';
     text-transform: uppercase;
+    background-color: $accent;
     display: block;
     border: none;
     @include breakpoints(large,medium) {
