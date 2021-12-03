@@ -1,7 +1,7 @@
 @use '../abstracts/index' as * ;
 
 .button__rounded {
-    margin: 0;
+    margin: 0 auto rem(48) auto ;
     padding: rem(68) rem(27.5) rem(59) rem(29.5);
     border-radius: 50%;
     color: $primary;
